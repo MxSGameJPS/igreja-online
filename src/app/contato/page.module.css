@@ -1,0 +1,278 @@
+.contatoPage {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Hero Section */
+.contatoHero {
+  background-image: url("/images/leão.webp");
+  background-size: cover;
+  background-position: center;
+  height: 40vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--branco);
+}
+
+.heroOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  position: relative;
+  z-index: 2;
+}
+
+.contatoHeroContent {
+  text-align: center;
+}
+
+.contatoHeroContent h1 {
+  font-size: 2.5rem;
+  color: var(--dourado);
+  margin-bottom: 0.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.contatoHeroContent p {
+  font-size: 1.2rem;
+  color: var(--prateado);
+}
+
+/* Main Content */
+.main {
+  flex: 1;
+  background-color: var(--preto);
+  padding: 3rem 0;
+}
+
+/* Layout de Grid para Contato */
+.contatoGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+/* Seção do Formulário */
+.formSection {
+  margin-bottom: 2rem;
+}
+
+.formContainer {
+  background-color: #1c1c1c;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.formContainer h2 {
+  color: var(--dourado);
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.statusMensagem {
+  padding: 1rem;
+  border-radius: 4px;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.sucesso {
+  background-color: rgba(39, 174, 96, 0.2);
+  border-left: 4px solid #27ae60;
+  color: #27ae60;
+}
+
+.erro {
+  background-color: rgba(231, 76, 60, 0.2);
+  border-left: 4px solid #e74c3c;
+  color: #e74c3c;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.formRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.formGroup label {
+  color: var(--dourado);
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.input,
+.select,
+.textarea {
+  padding: 0.8rem 1rem;
+  background-color: #252525;
+  border: 1px solid #333;
+  border-radius: 4px;
+  color: var(--texto-claro);
+  font-size: 1rem;
+}
+
+.input:focus,
+.select:focus,
+.textarea:focus {
+  outline: none;
+  border-color: var(--dourado);
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+.submitButton {
+  background-color: var(--dourado);
+  color: var(--preto);
+  border: none;
+  padding: 1rem;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 1rem;
+}
+
+.submitButton:hover {
+  background-color: var(--vermelho);
+  color: var(--branco);
+}
+
+.submitButton:disabled {
+  background-color: #555;
+  cursor: not-allowed;
+  color: #aaa;
+}
+
+/* Seção de Informações */
+.infoSection {
+  margin-bottom: 2rem;
+}
+
+.infoContainer {
+  background-color: #1c1c1c;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  height: 100%;
+}
+
+.infoContainer h2 {
+  color: var(--dourado);
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.infoItem {
+  display: flex;
+  margin-bottom: 1.5rem;
+  align-items: flex-start;
+}
+
+.infoIcone {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+  color: var(--dourado);
+  flex-shrink: 0;
+}
+
+.infoConteudo h3 {
+  color: var(--dourado);
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.infoConteudo p {
+  color: var(--texto-claro);
+  margin-bottom: 0.3rem;
+}
+
+.redesSociais {
+  margin-top: 2rem;
+}
+
+.redesSociais h3 {
+  color: var(--dourado);
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.redesLinks {
+  display: flex;
+  gap: 1rem;
+}
+
+.redesLinks a {
+  display: inline-block;
+  color: var(--prateado);
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--prateado);
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.redesLinks a:hover {
+  background-color: var(--dourado);
+  color: var(--preto);
+  border-color: var(--dourado);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .contatoHero {
+    height: 30vh;
+  }
+
+  .contatoHeroContent h1 {
+    font-size: 2rem;
+  }
+
+  .contatoGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .formRow {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+
+  .redesLinks {
+    flex-direction: column;
+  }
+
+  .redesLinks a {
+    text-align: center;
+  }
+}

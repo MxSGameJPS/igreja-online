@@ -1,0 +1,345 @@
+.devocionaisPage {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--preto);
+  color: var(--texto-claro);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.main {
+  flex: 1;
+  padding: 3rem 0;
+}
+
+/* Hero Section */
+.devocionaisHero {
+  position: relative;
+  height: 350px;
+  background-image: url("/images/oração.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.heroOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.heroContent {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding: 0 1.5rem;
+}
+
+.heroContent h1 {
+  font-size: 3.5rem;
+  color: var(--dourado);
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.heroContent p {
+  font-size: 1.3rem;
+  color: var(--branco);
+  margin-bottom: 2rem;
+}
+
+/* Intro Section */
+.introSection {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 3rem;
+}
+
+.sectionTitle {
+  font-size: 2.2rem;
+  color: var(--dourado);
+  margin-bottom: 1rem;
+}
+
+.divider {
+  width: 100px;
+  height: 4px;
+  background-color: var(--vermelho);
+  margin: 0 auto 2rem;
+}
+
+.introText {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+
+.ctaDevocional {
+  margin-top: 2rem;
+}
+
+.ctaBtn {
+  display: inline-block;
+  background-color: var(--dourado);
+  color: var(--preto);
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.ctaBtn:hover {
+  background-color: var(--vermelho);
+  color: var(--branco);
+  transform: translateY(-3px);
+}
+
+/* Loading e Error States */
+.carregando,
+.erro,
+.semDevocionais {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 200px;
+  padding: 2rem;
+}
+
+.erro h2 {
+  font-size: 2rem;
+  color: var(--vermelho);
+  margin-bottom: 1rem;
+}
+
+.erro p,
+.semDevocionais p {
+  margin-bottom: 2rem;
+  color: var(--texto-claro);
+}
+
+.botaoTentarNovamente {
+  display: inline-block;
+  background-color: var(--dourado);
+  color: var(--preto);
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.botaoTentarNovamente:hover {
+  background-color: var(--vermelho);
+  color: var(--branco);
+  transform: translateY(-3px);
+}
+
+/* Lista de Devocionais */
+.devocionaisListaSection {
+  margin-bottom: 4rem;
+}
+
+.devocionaisLista {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.devocionalCard {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--preto-claro);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.devocionalCard:hover {
+  transform: translateY(-5px);
+}
+
+.devocionalData {
+  background-color: var(--dourado);
+  color: var(--preto);
+  padding: 0.8rem 1.5rem;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.devocionalConteudo {
+  padding: 1.5rem;
+}
+
+.devocionalTitulo {
+  font-size: 1.8rem;
+  color: var(--dourado);
+  margin-bottom: 0.8rem;
+}
+
+.devocionalAutor {
+  font-size: 1rem;
+  color: var(--prateado);
+  margin-bottom: 1.5rem;
+}
+
+.versiculoPreview {
+  margin-bottom: 1.5rem;
+  padding: 1.5rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-left: 3px solid var(--dourado);
+  border-radius: 0 5px 5px 0;
+}
+
+.versiculoTextoPreview {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 0.8rem;
+  font-style: italic;
+}
+
+.versiculoReferenciaPreview {
+  font-size: 1rem;
+  color: var(--dourado);
+  text-align: right;
+  font-weight: 600;
+}
+
+.lerMaisBtn {
+  display: inline-block;
+  background-color: var(--vermelho);
+  color: var(--branco);
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.lerMaisBtn:hover {
+  background-color: var(--dourado);
+  color: var(--preto);
+}
+
+/* Inscrição Section */
+.inscricaoSection {
+  background-color: var(--preto-claro);
+  padding: 3rem 0;
+  margin-top: 3rem;
+  border-radius: 8px;
+}
+
+.inscricaoContainer {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 0 1.5rem;
+}
+
+.inscricaoContainer h2 {
+  font-size: 2.2rem;
+  color: var(--dourado);
+  margin-bottom: 1rem;
+}
+
+.inscricaoContainer p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.inscricaoForm {
+  display: flex;
+  max-width: 600px;
+  margin: 0 auto;
+  gap: 1rem;
+}
+
+.emailInput {
+  flex: 1;
+  padding: 0.8rem 1.2rem;
+  border-radius: 5px;
+  border: none;
+  font-size: 1rem;
+  background-color: var(--branco);
+}
+
+.inscricaoBtn {
+  background-color: var(--dourado);
+  color: var(--preto);
+  padding: 0 1.5rem;
+  border-radius: 5px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.inscricaoBtn:hover {
+  background-color: var(--vermelho);
+  color: var(--branco);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .devocionaisHero {
+    height: 300px;
+  }
+
+  .heroContent h1 {
+    font-size: 2.5rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.8rem;
+  }
+
+  .devocionalTitulo {
+    font-size: 1.5rem;
+  }
+
+  .versiculoTextoPreview {
+    font-size: 1rem;
+  }
+
+  .inscricaoForm {
+    flex-direction: column;
+  }
+
+  .emailInput,
+  .inscricaoBtn {
+    width: 100%;
+    padding: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .devocionaisHero {
+    height: 250px;
+  }
+
+  .heroContent h1 {
+    font-size: 2rem;
+  }
+
+  .heroContent p {
+    font-size: 1.1rem;
+  }
+
+  .devocionalCard {
+    margin: 0 0.5rem;
+  }
+}

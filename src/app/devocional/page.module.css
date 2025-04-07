@@ -1,0 +1,329 @@
+.devocionalPage {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--preto);
+  color: var(--texto-claro);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.main {
+  flex: 1;
+  padding: 3rem 0;
+}
+
+/* Hero Section */
+.devocionalHero {
+  position: relative;
+  height: 400px;
+  background-image: url("/images/biblia.webp");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.heroOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.heroContent {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding: 0 1.5rem;
+}
+
+.heroContent h1 {
+  font-size: 3.5rem;
+  color: var(--dourado);
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.heroContent p {
+  font-size: 1.3rem;
+  color: var(--branco);
+  margin-bottom: 2rem;
+}
+
+/* Loading e Error States */
+.carregando,
+.erro,
+.naoEncontrado {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 300px;
+  padding: 2rem;
+}
+
+.erro h2,
+.naoEncontrado h2 {
+  font-size: 2rem;
+  color: var(--vermelho);
+  margin-bottom: 1rem;
+}
+
+.erro p,
+.naoEncontrado p {
+  margin-bottom: 2rem;
+  color: var(--texto-claro);
+}
+
+.botaoTentarNovamente {
+  display: inline-block;
+  background-color: var(--dourado);
+  color: var(--preto);
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.botaoTentarNovamente:hover {
+  background-color: var(--vermelho);
+  color: var(--branco);
+  transform: translateY(-3px);
+}
+
+/* Cabeçalho do Devocional */
+.devocionalHeader {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.devocionalTitulo {
+  font-size: 2.8rem;
+  color: var(--dourado);
+  margin-bottom: 1.5rem;
+}
+
+.devocionalMeta {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  font-size: 1.1rem;
+  color: var(--prateado);
+}
+
+/* Section Styles */
+.sectionTitle {
+  font-size: 2rem;
+  color: var(--dourado);
+  margin-bottom: 1rem;
+}
+
+.divider {
+  width: 100px;
+  height: 4px;
+  background-color: var(--vermelho);
+  margin-bottom: 2rem;
+}
+
+/* Versículo Section */
+.versiculoChaveSection,
+.versiculoComplementarSection {
+  margin-bottom: 3rem;
+}
+
+.versiculoChaveContainer,
+.versiculoComplementarContainer {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.versiculoCard {
+  background-color: var(--preto-claro);
+  padding: 2rem;
+  border-radius: 8px;
+  border-left: 5px solid var(--dourado);
+  margin-bottom: 2rem;
+}
+
+.versiculoTexto {
+  font-size: 1.3rem;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+  font-style: italic;
+  color: var(--texto-claro);
+}
+
+.versiculoReferencia {
+  font-size: 1.1rem;
+  color: var(--dourado);
+  text-align: right;
+  font-weight: 600;
+}
+
+/* Conteúdo Section */
+.conteudoSection {
+  margin-bottom: 3rem;
+}
+
+.conteudoContainer {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.conteudoHtml {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--texto-claro);
+}
+
+.conteudoHtml h3 {
+  font-size: 1.6rem;
+  color: var(--dourado);
+  margin: 2rem 0 1rem;
+}
+
+.conteudoHtml p {
+  margin-bottom: 1.5rem;
+}
+
+.conteudoHtml em {
+  color: var(--dourado);
+  font-style: italic;
+}
+
+/* Compartilhar Section */
+.compartilharSection {
+  margin-top: 4rem;
+  margin-bottom: 3rem;
+}
+
+.compartilharContainer {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.compartilharButtons {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.compartilharButtons span {
+  color: var(--prateado);
+}
+
+.compartilharBtn {
+  background-color: var(--preto-claro);
+  color: var(--texto-claro);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.compartilharBtn:hover {
+  background-color: var(--dourado);
+  color: var(--preto);
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.linkBtn {
+  display: inline-block;
+  background-color: var(--dourado);
+  color: var(--preto);
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.linkBtn:hover {
+  background-color: var(--vermelho);
+  color: var(--branco);
+  transform: translateY(-3px);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .devocionalHero {
+    height: 300px;
+  }
+
+  .heroContent h1 {
+    font-size: 2.5rem;
+  }
+
+  .devocionalTitulo {
+    font-size: 2.2rem;
+  }
+
+  .devocionalMeta {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .versiculoTexto {
+    font-size: 1.2rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .devocionalHero {
+    height: 250px;
+  }
+
+  .heroContent h1 {
+    font-size: 2rem;
+  }
+
+  .heroContent p {
+    font-size: 1.1rem;
+  }
+
+  .devocionalTitulo {
+    font-size: 1.8rem;
+  }
+
+  .versiculoCard {
+    padding: 1.5rem;
+  }
+
+  .versiculoTexto {
+    font-size: 1.1rem;
+  }
+
+  .compartilharButtons {
+    justify-content: center;
+  }
+}

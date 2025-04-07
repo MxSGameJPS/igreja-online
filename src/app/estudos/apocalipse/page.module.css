@@ -1,0 +1,349 @@
+.apocalipsePage {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--preto);
+  color: var(--texto-claro);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.main {
+  flex: 1;
+  padding: 3rem 0;
+}
+
+/* Hero Section */
+.apocalipseHero {
+  position: relative;
+  height: 400px;
+  background-image: url("/images/leão.webp");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.heroOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.heroContent {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding: 0 1.5rem;
+}
+
+.heroContent h1 {
+  font-size: 3.5rem;
+  color: var(--dourado);
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.heroContent p {
+  font-size: 1.3rem;
+  color: var(--branco);
+  margin-bottom: 2rem;
+}
+
+/* Loading State */
+.carregando {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 300px;
+  padding: 2rem;
+}
+
+/* Section Styles */
+.sectionTitle {
+  font-size: 2.2rem;
+  color: var(--dourado);
+  margin-bottom: 1rem;
+}
+
+.divider {
+  width: 100px;
+  height: 4px;
+  background-color: var(--vermelho);
+  margin-bottom: 2rem;
+}
+
+/* Intro Section */
+.introSection {
+  margin-bottom: 3rem;
+  max-width: 900px;
+  margin: 0 auto 4rem;
+}
+
+.introText {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  color: var(--texto-claro);
+}
+
+/* Estrutura Section */
+.estruturaSection {
+  margin-bottom: 4rem;
+}
+
+.estruturaGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.estruturaItem {
+  display: flex;
+  background-color: var(--preto-claro);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.estruturaItem:hover {
+  transform: translateY(-5px);
+}
+
+.estruturaNumero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  font-size: 2rem;
+  font-weight: 700;
+  background-color: var(--dourado);
+  color: var(--preto);
+}
+
+.estruturaConteudo {
+  padding: 1.5rem;
+  flex: 1;
+}
+
+.estruturaConteudo h3 {
+  font-size: 1.4rem;
+  color: var(--dourado);
+  margin-bottom: 0.5rem;
+}
+
+.estruturaConteudo p {
+  font-size: 1rem;
+  color: var(--prateado);
+}
+
+/* Destaques Section */
+.destaquesSection {
+  margin-bottom: 4rem;
+}
+
+.destaquesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.destaqueCard {
+  background-color: var(--preto-claro);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.destaqueCard:hover {
+  transform: translateY(-5px);
+}
+
+.destaqueImg {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 3px solid var(--dourado);
+}
+
+.destaqueCard h3 {
+  font-size: 1.4rem;
+  color: var(--dourado);
+  margin: 1.5rem 1.5rem 0.8rem;
+}
+
+.destaqueCard p {
+  font-size: 1rem;
+  color: var(--texto-claro);
+  margin: 0 1.5rem 1.5rem;
+  line-height: 1.6;
+}
+
+.destaqueLink {
+  display: block;
+  background-color: var(--vermelho);
+  color: var(--branco);
+  text-align: center;
+  padding: 0.8rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.destaqueLink:hover {
+  background-color: var(--dourado);
+  color: var(--preto);
+}
+
+/* Inscrição Section */
+.inscricaoSection {
+  background-color: var(--preto-claro);
+  padding: 3rem;
+  border-radius: 8px;
+  margin-bottom: 3rem;
+}
+
+.inscricaoContainer {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.inscricaoContainer h2 {
+  font-size: 2rem;
+  color: var(--dourado);
+  margin-bottom: 1rem;
+}
+
+.inscricaoContainer p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.inscricaoForm {
+  display: flex;
+  max-width: 500px;
+  margin: 0 auto 1rem;
+  gap: 1rem;
+}
+
+.emailInput {
+  flex: 1;
+  padding: 0.8rem 1.2rem;
+  border-radius: 5px;
+  border: none;
+  font-size: 1rem;
+  background-color: var(--branco);
+}
+
+.inscricaoBtn {
+  background-color: var(--dourado);
+  color: var(--preto);
+  padding: 0 1.5rem;
+  border-radius: 5px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.inscricaoBtn:hover {
+  background-color: var(--vermelho);
+  color: var(--branco);
+}
+
+.privacidade {
+  font-size: 0.9rem;
+  color: var(--prateado);
+  margin-top: 1rem;
+}
+
+/* Navegação Section */
+.navegacaoSection {
+  margin-top: 3rem;
+}
+
+.voltarBtn {
+  display: inline-block;
+  background-color: var(--dourado);
+  color: var(--preto);
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.voltarBtn:hover {
+  background-color: var(--vermelho);
+  color: var(--branco);
+  transform: translateY(-3px);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .apocalipseHero {
+    height: 320px;
+  }
+
+  .heroContent h1 {
+    font-size: 2.5rem;
+  }
+
+  .heroContent p {
+    font-size: 1.1rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.8rem;
+  }
+
+  .destaquesGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .inscricaoSection {
+    padding: 2rem 1rem;
+  }
+
+  .inscricaoForm {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .emailInput,
+  .inscricaoBtn {
+    width: 100%;
+    padding: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .apocalipseHero {
+    height: 250px;
+  }
+
+  .heroContent h1 {
+    font-size: 2rem;
+  }
+
+  .estruturaNumero {
+    width: 60px;
+    font-size: 1.5rem;
+  }
+
+  .estruturaConteudo h3 {
+    font-size: 1.2rem;
+  }
+}

@@ -1,0 +1,271 @@
+.estudosPage {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--preto);
+  color: var(--texto-claro);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.main {
+  flex: 1;
+}
+
+/* Hero Section */
+.estudosHero {
+  position: relative;
+  height: 60vh;
+  background-image: url("/images/biblia.webp");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.heroOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+.estudosHeroContent {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 800px;
+  padding: 0 2rem;
+}
+
+.estudosHeroContent h1 {
+  font-size: 3.5rem;
+  color: var(--dourado);
+  margin-bottom: 1.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.estudosHeroContent p {
+  font-size: 1.5rem;
+  color: var(--prateado);
+}
+
+/* Seção de Versículo */
+.versiculoSection {
+  padding: 5rem 0;
+  background-color: var(--preto);
+}
+
+.versiculoContainer {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.sectionTitle {
+  font-size: 2.5rem;
+  color: var(--dourado);
+  margin-bottom: 1rem;
+}
+
+.divider {
+  width: 100px;
+  height: 4px;
+  background-color: var(--vermelho);
+  margin: 0 auto 3rem;
+}
+
+.versiculoCard {
+  background-color: var(--preto-claro);
+  padding: 2.5rem;
+  border-radius: 8px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+  border-left: 4px solid var(--dourado);
+}
+
+.versiculoTexto {
+  font-size: 1.2rem;
+  color: var(--texto-claro);
+  margin-bottom: 1.5rem;
+  line-height: 1.8;
+  font-style: italic;
+}
+
+.versiculoReferencia {
+  font-size: 1rem;
+  color: var(--dourado);
+  font-weight: bold;
+  text-align: right;
+}
+
+/* Lista de Estudos */
+.estudosListaSection {
+  padding: 5rem 0;
+  background-color: var(--preto-claro);
+}
+
+.estudosContainer {
+  text-align: center;
+}
+
+.estudosGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(550px, 1fr));
+  gap: 2.5rem;
+  margin-top: 3rem;
+}
+
+.estudoCard {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--preto);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.estudoCard:hover {
+  transform: translateY(-10px);
+}
+
+.estudoImagem {
+  position: relative;
+  height: 250px;
+}
+
+.estudoImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.estudoInfo {
+  padding: 2rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.estudoInfo h3 {
+  font-size: 1.5rem;
+  color: var(--dourado);
+  margin-bottom: 1rem;
+}
+
+.estudoInfo p {
+  color: var(--texto-claro);
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  flex-grow: 1;
+}
+
+.estudoBtn {
+  background-color: var(--vermelho);
+  color: var(--branco);
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  font-weight: 600;
+  align-self: flex-start;
+  transition: all 0.3s ease;
+}
+
+.estudoBtn:hover {
+  background-color: var(--dourado);
+  color: var(--preto);
+}
+
+/* Seção CTA */
+.ctaSection {
+  padding: 5rem 0;
+  background-color: var(--preto);
+}
+
+.ctaContainer {
+  background-color: var(--preto-claro);
+  padding: 3rem;
+  border-radius: 8px;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+  border-top: 4px solid var(--dourado);
+}
+
+.ctaContainer h2 {
+  font-size: 2rem;
+  color: var(--dourado);
+  margin-bottom: 1.5rem;
+}
+
+.ctaContainer p {
+  color: var(--texto-claro);
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.ctaBtn {
+  background-color: var(--dourado);
+  color: var(--preto);
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.ctaBtn:hover {
+  background-color: var(--vermelho);
+  color: var(--branco);
+  transform: translateY(-3px);
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+  .estudosGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .estudosHeroContent h1 {
+    font-size: 2.5rem;
+  }
+
+  .estudosHeroContent p {
+    font-size: 1.2rem;
+  }
+
+  .sectionTitle {
+    font-size: 2rem;
+  }
+
+  .ctaContainer {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .estudosHero {
+    height: 50vh;
+  }
+
+  .versiculoCard {
+    padding: 1.5rem;
+  }
+
+  .versiculoTexto {
+    font-size: 1.1rem;
+  }
+
+  .ctaContainer h2 {
+    font-size: 1.5rem;
+  }
+}

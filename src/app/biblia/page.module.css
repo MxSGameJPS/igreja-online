@@ -1,0 +1,445 @@
+.bibliaPage {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Navbar - reutilizando estilos da página principal */
+.navbar {
+  background-color: var(--preto);
+  border-bottom: 2px solid var(--dourado);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  padding: 1rem 0;
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.logo h1 {
+  color: var(--dourado);
+  font-size: 1.8rem;
+  margin: 0;
+  font-family: "Merriweather", serif;
+}
+
+.navLinks {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+.navLinks li a {
+  color: var(--texto-claro);
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.navLinks li a:hover,
+.navLinks li a.active {
+  color: var(--dourado);
+}
+
+/* Bíblia Hero */
+.bibliaHero {
+  background-image: url("/images/biblia.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 30vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--branco);
+  text-align: center;
+}
+
+.heroOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 1;
+}
+
+.bibliaHeroContent {
+  position: relative;
+  z-index: 2;
+}
+
+.bibliaHeroContent h1 {
+  font-size: 2.5rem;
+  color: var(--dourado);
+  margin-bottom: 0.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.bibliaHeroContent p {
+  font-size: 1.2rem;
+  color: var(--prateado);
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Main Content */
+.main {
+  flex: 1;
+  background-color: var(--preto);
+  padding: 2rem 0;
+}
+
+/* Seção de Busca */
+.buscaSection {
+  margin-bottom: 2rem;
+}
+
+.buscaBox {
+  background-color: #1c1c1c;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border-left: 4px solid var(--dourado);
+}
+
+.buscaBox h2 {
+  color: var(--dourado);
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.buscaForm {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.buscaInput {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border: 1px solid #333;
+  background-color: #252525;
+  color: var(--texto-claro);
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.buscaInput:focus {
+  outline: none;
+  border-color: var(--dourado);
+}
+
+.buscaButton {
+  background-color: var(--dourado);
+  color: var(--preto);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.buscaButton:hover {
+  background-color: var(--vermelho);
+  color: var(--branco);
+}
+
+.buscaDica {
+  color: var(--prateado);
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+/* Navegação da Bíblia */
+.navegacaoSection {
+  margin-bottom: 2rem;
+}
+
+.navegacaoContainer {
+  background-color: #1c1c1c;
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+
+.livrosContainer {
+  margin-bottom: 2rem;
+}
+
+.livrosContainer h3,
+.capitulosContainer h3 {
+  color: var(--dourado);
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.livrosList {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 0.5rem;
+  max-height: 300px;
+  overflow-y: auto;
+  padding-right: 0.5rem;
+}
+
+.livrosList::-webkit-scrollbar {
+  width: 6px;
+}
+
+.livrosList::-webkit-scrollbar-track {
+  background: #252525;
+  border-radius: 10px;
+}
+
+.livrosList::-webkit-scrollbar-thumb {
+  background: var(--dourado);
+  border-radius: 10px;
+}
+
+.livroButton {
+  background-color: #252525;
+  color: var(--texto-claro);
+  border: 1px solid #333;
+  padding: 0.6rem 0.75rem;
+  text-align: center;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.livroButton:hover {
+  background-color: #333;
+  border-color: var(--dourado);
+}
+
+.livroSelecionado {
+  background-color: var(--dourado);
+  color: var(--preto);
+  border-color: var(--dourado);
+  font-weight: bold;
+}
+
+.capitulosList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.capituloButton {
+  background-color: #252525;
+  color: var(--texto-claro);
+  border: 1px solid #333;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.capituloButton:hover {
+  background-color: #333;
+  border-color: var(--dourado);
+}
+
+.capituloSelecionado {
+  background-color: var(--dourado);
+  color: var(--preto);
+  border-color: var(--dourado);
+  font-weight: bold;
+}
+
+.versiculoContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.versiculoInput {
+  padding: 0.75rem 1rem;
+  border: 1px solid #333;
+  background-color: #252525;
+  color: var(--texto-claro);
+  border-radius: 4px;
+  font-size: 1rem;
+  width: 100%;
+  max-width: 200px;
+}
+
+.versiculoInput:focus {
+  outline: none;
+  border-color: var(--dourado);
+}
+
+/* Resultado da Pesquisa */
+.resultadoSection {
+  min-height: 300px;
+}
+
+.carregando {
+  text-align: center;
+  padding: 2rem 0;
+  color: var(--prateado);
+  font-style: italic;
+}
+
+.erro {
+  background-color: rgba(178, 34, 34, 0.2);
+  border-left: 4px solid var(--vermelho);
+  padding: 1rem;
+  color: var(--vermelho);
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+.resultadoBox {
+  background-color: #1c1c1c;
+  padding: 2rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  border-left: 4px solid var(--dourado);
+}
+
+.resultadoBox h2 {
+  color: var(--dourado);
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+.textoVersiculos {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  color: var(--texto-claro);
+}
+
+.versiculo {
+  margin-bottom: 1rem;
+}
+
+.versiculoNumero {
+  color: var(--dourado);
+  font-weight: bold;
+  margin-right: 0.3rem;
+}
+
+.traducao {
+  color: var(--prateado);
+  font-style: italic;
+  text-align: right;
+}
+
+.versiculoDiaBox {
+  background: linear-gradient(135deg, #121212 0%, #2a2a2a 100%);
+  border-radius: 8px;
+  border-left: 4px solid var(--dourado);
+  padding: 2rem;
+  text-align: center;
+}
+
+.versiculoDiaBox h2 {
+  color: var(--dourado);
+  margin-bottom: 1.5rem;
+}
+
+.verseReference {
+  margin-top: 1rem;
+  color: var(--dourado);
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+/* Footer - reutilizando estilos da página principal */
+.footer {
+  background-color: #0a0a0a;
+  color: var(--texto-claro);
+  padding: 3rem 0 1rem;
+  border-top: 2px solid var(--dourado);
+}
+
+.footerGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.footerColumn h3 {
+  color: var(--dourado);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.footerColumn h4 {
+  color: var(--dourado);
+  margin-bottom: 1rem;
+}
+
+.footerColumn ul {
+  list-style: none;
+}
+
+.footerColumn ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footerColumn ul li a {
+  color: var(--prateado);
+  transition: color 0.3s ease;
+}
+
+.footerColumn ul li a:hover {
+  color: var(--dourado);
+}
+
+.footerBottom {
+  border-top: 1px solid #333;
+  padding-top: 1.5rem;
+  text-align: center;
+  color: #777;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .navLinks {
+    display: none;
+  }
+
+  .buscaForm {
+    flex-direction: column;
+  }
+
+  .livrosList {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  }
+
+  .resultadoBox {
+    padding: 1.5rem;
+  }
+
+  .resultadoBox h2 {
+    font-size: 1.5rem;
+  }
+
+  .textoVersiculos {
+    font-size: 1rem;
+  }
+}

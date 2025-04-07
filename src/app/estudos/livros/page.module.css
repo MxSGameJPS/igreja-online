@@ -1,0 +1,470 @@
+.comentariosPage {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--preto);
+  color: var(--texto-claro);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.main {
+  flex: 1;
+  padding: 3rem 0;
+}
+
+/* Hero Section */
+.heroSection {
+  position: relative;
+  height: 350px;
+  background-image: url("/images/biblia.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.heroOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.heroContent {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding: 0 1.5rem;
+}
+
+.heroContent h1 {
+  font-size: 3.5rem;
+  color: var(--dourado);
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.heroContent p {
+  font-size: 1.3rem;
+  color: var(--branco);
+  margin-bottom: 2rem;
+}
+
+/* Section Styles */
+.sectionTitle {
+  font-size: 2.2rem;
+  color: var(--dourado);
+  margin-bottom: 1rem;
+}
+
+.divider {
+  width: 100px;
+  height: 4px;
+  background-color: var(--vermelho);
+  margin-bottom: 2rem;
+}
+
+/* Intro Section */
+.introSection {
+  margin-bottom: 3rem;
+}
+
+.introContent {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.introContent p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+/* Seletor Testamento */
+.seletorSection {
+  margin-bottom: 2.5rem;
+}
+
+.tabButtons {
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid var(--preto-claro);
+  padding-bottom: 1rem;
+}
+
+.tabBtn {
+  background: none;
+  border: none;
+  color: var(--texto-claro);
+  font-size: 1.2rem;
+  padding: 0.8rem 2rem;
+  cursor: pointer;
+  margin: 0 0.5rem;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.tabBtn:hover {
+  color: var(--dourado);
+}
+
+.tabBtn.active {
+  color: var(--dourado);
+  font-weight: 600;
+}
+
+.tabBtn.active::after {
+  content: "";
+  position: absolute;
+  bottom: -1rem;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: var(--dourado);
+}
+
+/* Livros Grid */
+.livrosGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.livroCard {
+  display: flex;
+  background-color: var(--preto-claro);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.livroCard:hover {
+  transform: translateY(-5px);
+}
+
+.livroImageContainer {
+  flex: 0 0 150px;
+  padding: 1rem;
+}
+
+.livroImage {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.livroContent {
+  flex: 1;
+  padding: 1.5rem 1.5rem 1.5rem 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.livroContent h3 {
+  font-size: 1.4rem;
+  color: var(--dourado);
+  margin-bottom: 0.5rem;
+}
+
+.livroAutor {
+  color: var(--vermelho);
+  font-style: italic;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.livroDescricao {
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+  flex-grow: 1;
+}
+
+.livroLink {
+  display: inline-block;
+  background-color: var(--dourado);
+  color: var(--preto);
+  text-align: center;
+  padding: 0.7rem 1.5rem;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  align-self: flex-start;
+}
+
+.livroLink:hover {
+  background-color: var(--vermelho);
+  color: var(--branco);
+}
+
+/* Assinatura Section */
+.assinaturaSection {
+  margin: 5rem 0;
+}
+
+.assinaturaContainer {
+  background-color: var(--preto-claro);
+  padding: 3rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.assinaturaContainer h2 {
+  font-size: 2.2rem;
+  color: var(--dourado);
+  margin-bottom: 1.5rem;
+}
+
+.assinaturaContainer > p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.planos {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.planoCard {
+  background-color: var(--preto);
+  border-radius: 8px;
+  padding: 2rem;
+  max-width: 350px;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.planoDestaque {
+  border: 2px solid var(--dourado);
+  transform: scale(1.05);
+}
+
+.planoTag {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--vermelho);
+  color: var(--branco);
+  padding: 0.3rem 1rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.planoCard h3 {
+  font-size: 1.5rem;
+  color: var(--dourado);
+  margin-bottom: 1rem;
+}
+
+.planoPreco {
+  font-size: 2.2rem;
+  color: var(--branco);
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.planoPreco span {
+  font-size: 1rem;
+  color: var(--prateado);
+  font-weight: 400;
+}
+
+.planoEconomia {
+  color: var(--vermelho);
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+}
+
+.planoFeatures {
+  text-align: left;
+  list-style-type: none;
+  margin-bottom: 2rem;
+}
+
+.planoFeatures li {
+  padding: 0.5rem 0;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.planoFeatures li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--dourado);
+  font-weight: bold;
+}
+
+.planoBtn {
+  background-color: var(--dourado);
+  color: var(--preto);
+  border: none;
+  border-radius: 4px;
+  padding: 0.8rem 0;
+  width: 100%;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.planoBtn:hover {
+  background-color: var(--vermelho);
+  color: var(--branco);
+}
+
+.planoInfo {
+  font-size: 0.9rem;
+  color: var(--prateado);
+}
+
+/* Depoimentos Section */
+.depoimentosSection {
+  margin-bottom: 4rem;
+}
+
+.depoimentosGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.depoimentoCard {
+  background-color: var(--preto-claro);
+  padding: 2rem;
+  border-radius: 8px;
+  position: relative;
+}
+
+.depoimentoCard::before {
+  content: '"';
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  font-size: 4rem;
+  color: var(--dourado);
+  opacity: 0.5;
+  line-height: 1;
+}
+
+.depoimentoTexto {
+  font-style: italic;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.depoimentoAutor {
+  text-align: right;
+  color: var(--dourado);
+  font-weight: 600;
+}
+
+/* Responsividade */
+@media (max-width: 992px) {
+  .livrosGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .planoDestaque {
+    transform: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .heroSection {
+    height: 300px;
+  }
+
+  .heroContent h1 {
+    font-size: 2.5rem;
+  }
+
+  .heroContent p {
+    font-size: 1.1rem;
+  }
+
+  .assinaturaContainer {
+    padding: 2rem 1rem;
+  }
+
+  .planos {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .planoCard {
+    max-width: 100%;
+  }
+
+  .depoimentosGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 576px) {
+  .heroSection {
+    height: 250px;
+  }
+
+  .heroContent h1 {
+    font-size: 2rem;
+  }
+
+  .livroCard {
+    flex-direction: column;
+  }
+
+  .livroImageContainer {
+    flex: initial;
+    padding: 1rem 1rem 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  .livroImage {
+    width: 120px;
+    height: auto;
+  }
+
+  .livroContent {
+    padding: 0 1.5rem 1.5rem;
+  }
+
+  .tabButtons {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+  }
+
+  .tabBtn {
+    width: 100%;
+    max-width: 250px;
+  }
+
+  .tabBtn.active::after {
+    display: none;
+  }
+}

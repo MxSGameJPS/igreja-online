@@ -1,0 +1,258 @@
+.estudoDetalhePage {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--preto);
+  color: var(--texto-claro);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.main {
+  flex: 1;
+  padding: 3rem 0;
+}
+
+/* Loading e Error States */
+.carregando,
+.erro,
+.naoEncontrado {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 300px;
+  padding: 2rem;
+}
+
+.erro h2,
+.naoEncontrado h2 {
+  font-size: 2rem;
+  color: var(--vermelho);
+  margin-bottom: 1rem;
+}
+
+.erro p,
+.naoEncontrado p {
+  margin-bottom: 2rem;
+  color: var(--texto-claro);
+}
+
+.botaoVoltar {
+  display: inline-block;
+  background-color: var(--dourado);
+  color: var(--preto);
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.botaoVoltar:hover {
+  background-color: var(--vermelho);
+  color: var(--branco);
+  transform: translateY(-3px);
+}
+
+/* Hero Section */
+.estudoHero {
+  margin-bottom: 3rem;
+}
+
+.estudoImagem {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  margin-bottom: 2rem;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.heroImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.estudoHeader {
+  text-align: center;
+}
+
+.estudoHeader h1 {
+  font-size: 3rem;
+  color: var(--dourado);
+  margin-bottom: 1.5rem;
+}
+
+.estudoMeta {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+.estudoAutor {
+  color: var(--prateado);
+}
+
+.estudoData {
+  color: var(--prateado);
+}
+
+/* Common Section Styles */
+.resumoSection,
+.topicosSection,
+.conteudoSection,
+.navegacaoSection {
+  margin-bottom: 4rem;
+}
+
+.resumoContainer,
+.topicosContainer,
+.conteudoContainer,
+.navegacaoContainer {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.sectionTitle {
+  font-size: 2.2rem;
+  color: var(--dourado);
+  margin-bottom: 1rem;
+}
+
+.divider {
+  width: 100px;
+  height: 4px;
+  background-color: var(--vermelho);
+  margin-bottom: 2rem;
+}
+
+/* Resumo Section */
+.resumoTexto {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: var(--texto-claro);
+}
+
+/* Tópicos Section */
+.topicosList {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.topicoItem {
+  background-color: var(--preto-claro);
+  color: var(--dourado);
+  padding: 0.7rem 1.5rem;
+  border-radius: 50px;
+  font-weight: 500;
+  border: 1px solid var(--dourado);
+}
+
+/* Conteúdo Section */
+.conteudoHtml {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--texto-claro);
+}
+
+.conteudoHtml h2 {
+  font-size: 1.8rem;
+  color: var(--dourado);
+  margin: 2rem 0 1rem;
+}
+
+.conteudoHtml p {
+  margin-bottom: 1.5rem;
+}
+
+/* Navegação Section */
+.navegacaoContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 4rem;
+}
+
+.compartilhar {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.compartilhar span {
+  color: var(--prateado);
+}
+
+.compartilharBotoes {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.compartilharBtn {
+  background-color: var(--preto-claro);
+  color: var(--texto-claro);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.compartilharBtn:hover {
+  background-color: var(--dourado);
+  color: var(--preto);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .estudoHeader h1 {
+    font-size: 2.5rem;
+  }
+
+  .estudoMeta {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .navegacaoContainer {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .topicosList {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .estudoHeader h1 {
+    font-size: 2rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.8rem;
+  }
+
+  .estudoImagem {
+    height: 250px;
+  }
+
+  .resumoTexto {
+    font-size: 1.1rem;
+  }
+
+  .compartilharBotoes {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,117 @@
+.verseCard {
+  background: linear-gradient(135deg, #121212 0%, #2a2a2a 100%);
+  border-radius: 8px;
+  border-left: 4px solid var(--dourado);
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.verseContent {
+  text-align: center;
+}
+
+.verseContent h3 {
+  color: var(--dourado);
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.verse {
+  font-size: 1.3rem;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+  font-style: italic;
+  color: var(--texto-claro);
+}
+
+.verseReference {
+  font-weight: bold;
+  color: var(--dourado);
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.verseBtns {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.novoVersiculoBtn,
+.compartilharBtn {
+  background-color: var(--preto);
+  color: var(--dourado);
+  border: 1px solid var(--dourado);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.novoVersiculoBtn:hover,
+.compartilharBtn:hover {
+  background-color: var(--dourado);
+  color: var(--preto);
+  transform: scale(1.1);
+}
+
+.mensagemCompartilhado {
+  margin-top: 1rem;
+  color: var(--verde);
+  font-size: 0.9rem;
+  animation: fadeInOut 3s ease;
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; }
+  20% { opacity: 1; }
+  80% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.carregando {
+  color: var(--prateado);
+  font-style: italic;
+  margin: 1.5rem 0;
+}
+
+.erro {
+  color: var(--vermelho);
+  margin: 1.5rem 0;
+}
+
+.recarregarButton {
+  background-color: var(--dourado);
+  color: var(--preto);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.recarregarButton:hover {
+  background-color: var(--vermelho);
+  color: var(--branco);
+}
+
+.semVersiculoContainer {
+  margin: 1.5rem 0;
+}
+
+@media (max-width: 768px) {
+  .verseCard {
+    padding: 1.5rem;
+  }
+  
+  .verse {
+    font-size: 1.1rem;
+  }
+} 

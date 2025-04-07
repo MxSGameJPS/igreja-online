@@ -6,13 +6,9 @@
   --button-primary-hover: #383838;
   --button-secondary-hover: #f2f2f2;
 
-  display: grid;
-  grid-template-rows: 20px 1fr 20px;
-  align-items: center;
-  justify-items: center;
-  min-height: 100svh;
-  padding: 80px;
-  gap: 64px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   font-family: var(--font-geist-sans);
 }
 
@@ -27,137 +23,687 @@
   }
 }
 
+/* Navbar */
+.navbar {
+  background-color: var(--preto);
+  border-bottom: 2px solid var(--dourado);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  padding: 1rem 0;
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.logo h1 {
+  color: var(--dourado);
+  font-size: 1.8rem;
+  margin: 0;
+  font-family: "Merriweather", serif;
+}
+
+.navLinks {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+.navLinks li a {
+  color: var(--texto-claro);
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.navLinks li a:hover {
+  color: var(--dourado);
+}
+
+/* =========== ESTILOS PRINCIPAIS =========== */
 .main {
   display: flex;
   flex-direction: column;
-  gap: 32px;
-  grid-row-start: 2;
+  flex: 1;
+  background-color: var(--preto);
+  color: var(--texto-claro);
 }
 
-.main ol {
-  font-family: var(--font-geist-mono);
-  padding-left: 0;
-  margin: 0;
-  font-size: 14px;
-  line-height: 24px;
-  letter-spacing: -0.01em;
-  list-style-position: inside;
-}
-
-.main li:not(:last-of-type) {
-  margin-bottom: 8px;
-}
-
-.main code {
-  font-family: inherit;
-  background: var(--gray-alpha-100);
-  padding: 2px 4px;
-  border-radius: 4px;
-  font-weight: 600;
-}
-
-.ctas {
-  display: flex;
-  gap: 16px;
-}
-
-.ctas a {
-  appearance: none;
-  border-radius: 128px;
-  height: 48px;
-  padding: 0 20px;
-  border: none;
-  border: 1px solid transparent;
-  transition:
-    background 0.2s,
-    color 0.2s,
-    border-color 0.2s;
-  cursor: pointer;
+/* =========== HERO SECTION =========== */
+.heroSection {
+  height: 100vh;
+  background-image: url("/images/leão.webp");
+  background-size: cover;
+  background-position: center;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 16px;
-  line-height: 20px;
-  font-weight: 500;
+  text-align: center;
 }
 
-a.primary {
-  background: var(--foreground);
-  color: var(--background);
-  gap: 8px;
+.heroOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.75);
 }
 
-a.secondary {
-  border-color: var(--gray-alpha-200);
-  min-width: 158px;
+.heroContent {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding: 0 2rem;
 }
 
-.footer {
-  grid-row-start: 3;
+.heroContent h1 {
+  font-size: 4rem;
+  font-weight: 700;
+  color: var(--dourado);
+  margin-bottom: 1.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.heroContent p {
+  font-size: 1.5rem;
+  margin-bottom: 2.5rem;
+  color: var(--prateado);
+}
+
+.heroBtns {
   display: flex;
-  gap: 24px;
+  justify-content: center;
+  gap: 1.5rem;
 }
 
-.footer a {
+.primaryBtn,
+.secondaryBtn {
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+.primaryBtn {
+  background-color: var(--dourado);
+  color: var(--preto);
+}
+
+.primaryBtn:hover {
+  background-color: var(--vermelho);
+  color: var(--branco);
+  transform: translateY(-3px);
+}
+
+.secondaryBtn {
+  background-color: transparent;
+  color: var(--branco);
+  border: 2px solid var(--branco);
+}
+
+.secondaryBtn:hover {
+  background-color: var(--branco);
+  color: var(--preto);
+  transform: translateY(-3px);
+}
+
+/* =========== SEÇÃO DE INFORMAÇÕES =========== */
+.infoSection {
+  padding: 5rem 0;
+  background-color: var(--preto-claro);
+}
+
+.infoContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 0 1.5rem;
+}
+
+.infoCard {
+  flex: 1;
+  background-color: var(--preto);
+  padding: 2.5rem;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  border-bottom: 3px solid var(--dourado);
+}
+
+.infoCard:hover {
+  transform: translateY(-10px);
+}
+
+.infoIcon {
+  font-size: 2.5rem;
+  color: var(--dourado);
+  margin-bottom: 1.5rem;
+}
+
+.infoCard h3 {
+  color: var(--dourado);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.infoCard p {
+  color: var(--texto-claro);
+  margin-bottom: 0.5rem;
+}
+
+/* =========== SEÇÃO VERSÍCULO DO DIA =========== */
+.versiculoSection {
+  padding: 5rem 0;
+  background-color: var(--preto);
+}
+
+.versiculoContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  text-align: center;
+}
+
+.sectionTitle {
+  font-size: 2.5rem;
+  color: var(--dourado);
+  margin-bottom: 1rem;
+}
+
+.divider {
+  width: 100px;
+  height: 4px;
+  background-color: var(--vermelho);
+  margin: 0 auto 3rem;
+}
+
+/* =========== SEÇÃO DE EVENTOS =========== */
+.eventosSection {
+  padding: 5rem 0;
+  background-color: var(--preto-claro);
+}
+
+.eventosContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  text-align: center;
+}
+
+.eventosGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(550px, 1fr));
+  gap: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+.eventoCard {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--preto);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.eventoCard:hover {
+  transform: translateY(-10px);
+}
+
+.eventoImagem {
+  position: relative;
+  height: 250px;
+}
+
+.eventoImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.eventoData {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: var(--dourado);
+  color: var(--preto);
+  padding: 0.8rem;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 70px;
+}
+
+.dia {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.mes {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.eventoInfo {
+  padding: 2rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.eventoInfo h3 {
+  font-size: 1.5rem;
+  color: var(--dourado);
+  margin-bottom: 1rem;
+}
+
+.eventoInfo p {
+  color: var(--texto-claro);
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.eventoMetaInfo {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.eventoMetaInfo span {
+  color: var(--prateado);
+  font-size: 0.9rem;
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 0.5rem;
 }
 
-.footer img {
-  flex-shrink: 0;
+.eventoBtn {
+  background-color: var(--vermelho);
+  color: var(--branco);
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  font-weight: 600;
+  align-self: flex-start;
+  transition: all 0.3s ease;
 }
 
-/* Enable hover only on non-touch devices */
-@media (hover: hover) and (pointer: fine) {
-  a.primary:hover {
-    background: var(--button-primary-hover);
-    border-color: transparent;
+.eventoBtn:hover {
+  background-color: var(--dourado);
+  color: var(--preto);
+}
+
+.verTodos {
+  margin-top: 2rem;
+}
+
+.verTodosBtn {
+  background-color: transparent;
+  color: var(--dourado);
+  border: 2px solid var(--dourado);
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.verTodosBtn:hover {
+  background-color: var(--dourado);
+  color: var(--preto);
+}
+
+/* =========== SEÇÃO DE MINISTÉRIOS =========== */
+.ministeriosSection {
+  padding: 5rem 0;
+  background-color: var(--preto);
+}
+
+.ministeriosContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  text-align: center;
+}
+
+.ministeriosGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.ministerioCard {
+  background-color: var(--preto-claro);
+  padding: 2.5rem 1.5rem;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.ministerioCard:hover {
+  transform: translateY(-10px);
+  background-color: var(--preto-mais-claro);
+}
+
+.ministerioIcone {
+  font-size: 3rem;
+  color: var(--dourado);
+  margin-bottom: 1.5rem;
+}
+
+.ministerioCard h3 {
+  font-size: 1.5rem;
+  color: var(--dourado);
+  margin-bottom: 1rem;
+}
+
+.ministerioCard p {
+  color: var(--texto-claro);
+  line-height: 1.6;
+}
+
+.saibaMais {
+  margin-top: 2rem;
+}
+
+.saibaMaisBtn {
+  background-color: var(--dourado);
+  color: var(--preto);
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.saibaMaisBtn:hover {
+  background-color: var(--vermelho);
+  color: var(--branco);
+}
+
+/* =========== SEÇÃO CTA FINAL =========== */
+.ctaSection {
+  padding: 6rem 0;
+  background-image: url("/images/oração.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  text-align: center;
+}
+
+.ctaOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+}
+
+.ctaContent {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.ctaContent h2 {
+  font-size: 3rem;
+  color: var(--dourado);
+  margin-bottom: 1.5rem;
+}
+
+.ctaContent p {
+  font-size: 1.2rem;
+  color: var(--prateado);
+  margin-bottom: 2.5rem;
+}
+
+.ctaBtn {
+  background-color: var(--dourado);
+  color: var(--preto);
+  padding: 1rem 2.5rem;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+.ctaBtn:hover {
+  background-color: var(--vermelho);
+  color: var(--branco);
+  transform: translateY(-3px);
+}
+
+/* =========== RECURSOS SECTION =========== */
+.recursosSection {
+  padding: 5rem 0;
+  background-color: var(--preto-claro);
+}
+
+.recursosContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  text-align: center;
+}
+
+.recursosGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.recursoCard {
+  background-color: var(--preto);
+  padding: 2.5rem 1.5rem;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 3px solid var(--dourado);
+}
+
+.recursoCard:hover {
+  transform: translateY(-10px);
+}
+
+.recursoIcone {
+  font-size: 3rem;
+  color: var(--dourado);
+  margin-bottom: 1.5rem;
+}
+
+.recursoCard h3 {
+  font-size: 1.5rem;
+  color: var(--dourado);
+  margin-bottom: 1rem;
+}
+
+.recursoCard p {
+  color: var(--texto-claro);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.recursoBtn {
+  background-color: var(--dourado);
+  color: var(--preto);
+  padding: 0.7rem 1.5rem;
+  border-radius: 5px;
+  font-weight: 600;
+  align-self: center;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.recursoBtn:hover {
+  background-color: var(--vermelho);
+  color: var(--branco);
+}
+
+/* =========== DESTAQUES SECTION =========== */
+.destaquesSection {
+  padding: 5rem 0;
+  background-color: var(--preto);
+}
+
+.destaquesContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  text-align: center;
+}
+
+.destaquesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(550px, 1fr));
+  gap: 2.5rem;
+  margin-top: 3rem;
+}
+
+.destaqueCard {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--preto-claro);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.destaqueCard:hover {
+  transform: translateY(-10px);
+}
+
+.destaqueImagem {
+  position: relative;
+  height: 250px;
+}
+
+.destaqueImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.destaqueInfo {
+  padding: 2rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.destaqueInfo h3 {
+  font-size: 1.5rem;
+  color: var(--dourado);
+  margin-bottom: 1rem;
+}
+
+.destaqueInfo p {
+  color: var(--texto-claro);
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  flex-grow: 1;
+}
+
+.saibaMaisBtn {
+  background-color: var(--vermelho);
+  color: var(--branco);
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  font-weight: 600;
+  align-self: flex-start;
+  transition: all 0.3s ease;
+}
+
+.saibaMaisBtn:hover {
+  background-color: var(--dourado);
+  color: var(--preto);
+}
+
+/* =========== RESPONSIVIDADE =========== */
+@media (max-width: 1024px) {
+  .eventosGrid {
+    grid-template-columns: 1fr;
   }
 
-  a.secondary:hover {
-    background: var(--button-secondary-hover);
-    border-color: transparent;
-  }
-
-  .footer a:hover {
-    text-decoration: underline;
-    text-underline-offset: 4px;
+  .destaquesGrid {
+    grid-template-columns: 1fr;
   }
 }
 
-@media (max-width: 600px) {
-  .page {
-    padding: 32px;
-    padding-bottom: 80px;
+@media (max-width: 768px) {
+  .heroContent h1 {
+    font-size: 3rem;
   }
 
-  .main {
-    align-items: center;
+  .heroContent p {
+    font-size: 1.2rem;
   }
 
-  .main ol {
-    text-align: center;
+  .heroBtns {
+    flex-direction: column;
+    gap: 1rem;
   }
 
-  .ctas {
+  .infoContainer {
     flex-direction: column;
   }
 
-  .ctas a {
-    font-size: 14px;
-    height: 40px;
-    padding: 0 16px;
+  .eventoMetaInfo {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
   }
 
-  a.secondary {
-    min-width: auto;
+  .ministeriosGrid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   }
 
-  .footer {
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
+  .ctaContent h2 {
+    font-size: 2.5rem;
+  }
+
+  .recursosGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroContent h1 {
+    font-size: 2.5rem;
+  }
+
+  .heroSection {
+    height: 80vh;
+  }
+
+  .sectionTitle {
+    font-size: 2rem;
+  }
+
+  .verseCard {
+    padding: 1.5rem;
   }
 }
 
