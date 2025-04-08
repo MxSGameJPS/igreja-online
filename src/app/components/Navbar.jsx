@@ -89,6 +89,14 @@ export default function Navbar() {
           </li>
           <li>
             <Link
+              href="/estudos/livros"
+              className={pathname === "/estudos/livros" ? styles.active : ""}
+            >
+              Comentários Bíblicos
+            </Link>
+          </li>
+          <li>
+            <Link
               href="/sobre"
               className={pathname === "/sobre" ? styles.active : ""}
             >

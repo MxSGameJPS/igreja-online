@@ -207,6 +207,104 @@
   line-height: 1.6;
 }
 
+/* Recursos Section */
+.recursosSection {
+  margin-bottom: 4rem;
+}
+
+.recursosGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.recursoCard {
+  background-color: #1c1c1c;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.recursoCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.recursoIcone {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.recursoCard h3 {
+  color: var(--dourado);
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.recursoCard p {
+  color: var(--texto-claro);
+  line-height: 1.6;
+}
+
+/* Doação Section */
+.doacaoSection {
+  margin-bottom: 4rem;
+}
+
+.doacaoCard {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+  border-radius: 8px;
+  padding: 2rem;
+  border-left: 4px solid var(--dourado);
+}
+
+.doacaoCard h2 {
+  color: var(--dourado);
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.doacaoTexto {
+  color: var(--texto-claro);
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+.doacaoLista {
+  color: var(--texto-claro);
+  margin-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.doacaoLista li {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+.doacaoBotoes {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.doacaoButton {
+  background-color: var(--dourado);
+  color: var(--preto);
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.doacaoButton:hover {
+  background-color: #d4af37;
+  transform: translateY(-2px);
+}
+
 /* Participação Section */
 .participacaoSection {
   margin-top: 3rem;

@@ -13,7 +13,7 @@ const comentarios = {
     autor: "Dr. Paulo Martins",
     resumo:
       "O livro de Gênesis é o livro das origens. Ele nos apresenta a origem do universo, da humanidade, do pecado, da salvação, da família e do povo de Israel.",
-    imagemCapa: "/images/genesis.jpg",
+    imagemCapa: "/images/biblia.webp",
     capitulos: [
       {
         numero: 1,
@@ -67,7 +67,7 @@ const comentarios = {
     autor: "Dr. Paulo Martins",
     resumo:
       "O livro de Êxodo narra a libertação dos israelitas da escravidão no Egito, a jornada pelo deserto, o estabelecimento da aliança no Sinai e a construção do tabernáculo.",
-    imagemCapa: "/images/exodo.jpg",
+    imagemCapa: "/images/biblia.webp",
     capitulos: [
       {
         numero: 1,
@@ -129,7 +129,7 @@ const comentarios = {
     autor: "Dr. Pedro Santos",
     resumo:
       "O Evangelho de Mateus apresenta Jesus como o Messias prometido e o cumprimento das profecias do Antigo Testamento, com ênfase em seu ensinamento e no Reino dos Céus.",
-    imagemCapa: "/images/mateus.jpg",
+    imagemCapa: "/images/biblia.webp",
     capitulos: [
       {
         numero: 1,
@@ -190,7 +190,7 @@ const comentarios = {
     autor: "Dr. Lucas Mendes",
     resumo:
       "O livro de Apocalipse, também conhecido como Revelação, contém visões proféticas dadas ao apóstolo João, revelando o plano de Deus para os últimos tempos e a vitória final de Cristo.",
-    imagemCapa: "/images/apocalipse.jpg",
+    imagemCapa: "/images/leão.webp",
     capitulos: [
       {
         numero: 1,

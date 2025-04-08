@@ -230,7 +230,7 @@ O Reino de nosso Senhor e do seu Cristo`,
             </div>
             <div className={styles.introImagem}>
               <Image
-                src="/images/louvor.jpg"
+                src="/images/biblia.webp"
                 alt="Adoração e Louvor"
                 width={400}
                 height={300}
@@ -295,7 +295,15 @@ O Reino de nosso Senhor e do seu Cristo`,
                       Ver detalhes
                     </Link>
                     <div className={styles.hinoBtns}>
-                      <button className={styles.hinoIconBtn} title="Ver cifra">
+                      <Link
+                        href={`/louvor/${hino.id}`}
+                        className={`${styles.hinoIconBtn} ${styles.playBtn}`}
+                        title="Tocar"
+                      >
+                        <span className={styles.playIcon}></span>
+                        Tocar
+                      </Link>
+                      {/* <button className={styles.hinoIconBtn} title="Ver cifra">
                         <span className={styles.cifraIcon}></span>
                       </button>
                       <button
@@ -306,7 +314,7 @@ O Reino de nosso Senhor e do seu Cristo`,
                       </button>
                       <button className={styles.hinoIconBtn} title="Baixar MP3">
                         <span className={styles.mp3Icon}></span>
-                      </button>
+                      </button> */}
                     </div>
                   </div>
                 </div>

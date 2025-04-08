@@ -14,8 +14,12 @@ export default function Sobre() {
         <div className={styles.heroOverlay}></div>
         <div className={styles.container}>
           <div className={styles.sobreHeroContent}>
-            <h1>Sobre Nossa Igreja</h1>
-            <p>Conheça nossa história, missão e valores</p>
+            <h1>Sobre o Portal</h1>
+            <p>Conheça nossa missão, valores e como apoiar esse ministério</p>
+            <div className={styles.versiculoDestaque}>
+              "Examinais as Escrituras, porque vós cuidais ter nelas a vida
+              eterna, e são elas que de mim testificam." - João 5:39
+            </div>
           </div>
         </div>
       </section>
@@ -32,32 +36,35 @@ export default function Sobre() {
             <div className={styles.historiaConteudo}>
               <div className={styles.historiaTexto}>
                 <p>
-                  A Igreja Online nasceu do desejo de levar a Palavra de Deus a
-                  todas as pessoas, independentemente de onde estejam. Fundada
-                  em 2010, nossa comunidade começou como um pequeno grupo de
-                  estudo bíblico que se reunia em uma casa simples.
+                  O Portal Cristão Online nasceu do desejo de democratizar o
+                  acesso à Palavra de Deus e recursos de estudo bíblico de
+                  qualidade para todos os cristãos. Este é um projeto novo,
+                  ainda em desenvolvimento, criado com a visão de compartilhar
+                  estudos bíblicos e devocionais diários com todos que buscam
+                  crescer na fé.
                 </p>
 
                 <p>
-                  Com o passar dos anos, nossa congregação cresceu, e em 2015
-                  pudemos inaugurar nosso primeiro templo. A cada dia, mais
-                  pessoas se juntavam à nossa comunidade, atraídas pela mensagem
-                  de amor, esperança e fé que compartilhamos.
+                  Estamos trabalhando continuamente para expandir nossos
+                  recursos e atender às diferentes necessidades dos usuários.
+                  Nossa meta é oferecer ferramentas de busca na Bíblia, estudos
+                  temáticos, materiais para reflexão e crescimento espiritual,
+                  além de recursos para louvor e adoração.
                 </p>
 
                 <p>
-                  Em 2020, diante dos desafios impostos pela pandemia,
-                  expandimos nossa presença online, alcançando fiéis em diversas
-                  partes do mundo. Hoje, somos uma igreja que mantém suas portas
-                  físicas e virtuais abertas para todos que desejam conhecer e
-                  se aproximar de Deus.
+                  Nossa visão é ser um ministério digital comprometido em
+                  fornecer conteúdo bíblico de qualidade, acessível a qualquer
+                  pessoa com conexão à internet, independentemente de onde
+                  esteja. Queremos que cada cristão tenha acesso às ferramentas
+                  necessárias para aprofundar sua fé e conhecimento da Palavra.
                 </p>
               </div>
 
               <div className={styles.historiaImagem}>
                 <Image
-                  src="/images/leão.webp"
-                  alt="História da Igreja"
+                  src="/images/biblia.webp"
+                  alt="Bíblia Sagrada"
                   width={400}
                   height={300}
                   className={styles.imagemArredondada}
@@ -78,9 +85,9 @@ export default function Sobre() {
                 <div className={styles.cardIcone}>🕊️</div>
                 <h3>Missão</h3>
                 <p>
-                  Levar a Palavra de Deus a todas as pessoas, em todos os
-                  lugares, promovendo a transformação de vidas por meio da
-                  mensagem do Evangelho de Jesus Cristo.
+                  Proporcionar acesso livre e de qualidade à Bíblia Sagrada e
+                  recursos de estudo bíblico para fortalecer a fé e o
+                  conhecimento de cristãos em todo o mundo.
                 </p>
               </div>
 
@@ -88,112 +95,161 @@ export default function Sobre() {
                 <div className={styles.cardIcone}>👁️</div>
                 <h3>Visão</h3>
                 <p>
-                  Ser uma igreja referência na propagação do amor de Cristo,
-                  formando discípulos comprometidos com a Palavra e com impacto
-                  positivo na sociedade.
+                  Ser o principal portal de referência para estudo bíblico e
+                  recursos cristãos em língua portuguesa, acessível a todos e
+                  comprometido com a fidelidade às Escrituras.
                 </p>
               </div>
 
               <div className={styles.missaoCard}>
                 <div className={styles.cardIcone}>❤️</div>
-                <h3>Amor</h3>
+                <h3>Acessibilidade</h3>
                 <p>
-                  Manifestamos o amor de Cristo em tudo o que fazemos, acolhendo
-                  cada pessoa com respeito e compaixão, independentemente de sua
-                  origem ou história.
+                  Acreditamos que o conhecimento bíblico deve estar disponível
+                  para todos, independentemente de limitações geográficas,
+                  financeiras ou físicas.
                 </p>
               </div>
 
               <div className={styles.missaoCard}>
                 <div className={styles.cardIcone}>📖</div>
-                <h3>Palavra</h3>
+                <h3>Fidelidade</h3>
                 <p>
-                  Valorizamos a Bíblia como autoridade em nossa fé e prática,
-                  buscando estudá-la e aplicá-la em nossas vidas diariamente.
+                  Comprometemo-nos com a precisão e fidelidade ao texto bíblico,
+                  mantendo o respeito pela interpretação histórica das
+                  Escrituras.
                 </p>
               </div>
 
               <div className={styles.missaoCard}>
                 <div className={styles.cardIcone}>🙏</div>
-                <h3>Oração</h3>
+                <h3>Espiritualidade</h3>
                 <p>
-                  Cremos no poder da oração como meio de comunicação com Deus e
-                  como instrumento de transformação pessoal e comunitária.
+                  Reconhecemos que o estudo bíblico vai além do conhecimento
+                  acadêmico e deve promover uma conexão espiritual mais profunda
+                  com Deus.
                 </p>
               </div>
 
               <div className={styles.missaoCard}>
                 <div className={styles.cardIcone}>🤝</div>
-                <h3>Comunhão</h3>
+                <h3>Comunidade</h3>
                 <p>
-                  Cultivamos relacionamentos genuínos, baseados no respeito
-                  mútuo e na unidade do corpo de Cristo, fortalecendo nossa
-                  comunidade de fé.
+                  Valorizamos a construção de uma comunidade virtual onde
+                  cristãos possam compartilhar conhecimento, experiências e
+                  apoio mútuo.
                 </p>
               </div>
             </div>
           </section>
 
-          {/* Seção de Liderança */}
-          <section className={styles.liderancaSection}>
+          {/* Seção de Recursos */}
+          <section className={styles.recursosSection}>
             <div className={styles.sectionHeader}>
-              <h2>Nossa Liderança</h2>
+              <h2>Nossos Recursos</h2>
               <div className={styles.divider}></div>
             </div>
 
-            <div className={styles.liderancaGrid}>
-              <div className={styles.liderCard}>
-                <div className={styles.liderImagem}>
-                  <Image
-                    src="/images/espirito-santo.jpg"
-                    alt="Pastor João Silva"
-                    width={200}
-                    height={200}
-                    className={styles.liderFoto}
-                  />
-                </div>
-                <h3>Pr. João Silva</h3>
-                <p className={styles.liderCargo}>Pastor Presidente</p>
-                <p className={styles.liderBio}>
-                  Servindo há mais de 20 anos no ministério, o Pastor João
-                  lidera nossa igreja com sabedoria e amor.
+            <div className={styles.recursosGrid}>
+              <div className={styles.recursoCard}>
+                <div className={styles.recursoIcone}>📱</div>
+                <h3>Bíblia Online</h3>
+                <p>
+                  Acesso rápido e fácil a diferentes traduções da Bíblia, com
+                  ferramentas de busca, marcação de versículos e leitura diária
+                  personalizada.
                 </p>
               </div>
 
-              <div className={styles.liderCard}>
-                <div className={styles.liderImagem}>
-                  <Image
-                    src="/images/oração.jpg"
-                    alt="Maria Oliveira"
-                    width={200}
-                    height={200}
-                    className={styles.liderFoto}
-                  />
-                </div>
-                <h3>Pra. Maria Oliveira</h3>
-                <p className={styles.liderCargo}>Pastora de Louvor</p>
-                <p className={styles.liderBio}>
-                  Com seu coração apaixonado por adoração, a Pastora Maria
-                  coordena nosso ministério de música.
+              <div className={styles.recursoCard}>
+                <div className={styles.recursoIcone}>📚</div>
+                <h3>Estudos Bíblicos</h3>
+                <p>
+                  Estudos temáticos, comentários, explicações de contexto
+                  histórico e análises de livros da Bíblia, desenvolvidos por
+                  estudiosos respeitados.
                 </p>
               </div>
 
-              <div className={styles.liderCard}>
-                <div className={styles.liderImagem}>
-                  <Image
-                    src="/images/biblia.webp"
-                    alt="Paulo Santos"
-                    width={200}
-                    height={200}
-                    className={styles.liderFoto}
-                  />
-                </div>
-                <h3>Pr. Paulo Santos</h3>
-                <p className={styles.liderCargo}>Pastor de Ensino</p>
-                <p className={styles.liderBio}>
-                  Responsável pelos estudos bíblicos e formação teológica em
-                  nossa comunidade.
+              <div className={styles.recursoCard}>
+                <div className={styles.recursoIcone}>🎵</div>
+                <h3>Recursos de Louvor</h3>
+                <p>
+                  Coletânea de hinos, cânticos contemporâneos e músicas para
+                  momentos de adoração pessoal ou comunitária, com letras,
+                  cifras e partituras.
                 </p>
+              </div>
+
+              <div className={styles.recursoCard}>
+                <div className={styles.recursoIcone}>📅</div>
+                <h3>Devocionais</h3>
+                <p>
+                  Meditações diárias, reflexões espirituais e conteúdo para
+                  momentos de oração e intimidade com Deus.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          {/* Seção de Doação */}
+          <section className={styles.doacaoSection}>
+            <div className={styles.doacaoCard}>
+              <h2>Apoie Este Ministério</h2>
+              <div className={styles.divider}></div>
+              <p className={styles.doacaoTexto}>
+                O Portal Cristão Online está em fase inicial de desenvolvimento.
+                Estamos criando este projeto com muito amor e dedicação para
+                fornecer um ambiente completo para estudo bíblico e crescimento
+                espiritual. Ainda temos muito a implementar e melhorar, e cada
+                contribuição nos ajuda a tornar esse sonho realidade.
+              </p>
+
+              <div className={styles.planoAcesso}>
+                <h3>Acesso Completo</h3>
+                <div className={styles.planoPreco}>R$ 20,00</div>
+                <p>
+                  Com uma única doação de R$ 20,00, você terá acesso a todos os
+                  recursos do site:
+                </p>
+                <ul className={styles.doacaoLista}>
+                  <li>Todos os estudos bíblicos e comentários</li>
+                  <li>Devocionais exclusivos</li>
+                  <li>Ferramentas avançadas de estudo</li>
+                  <li>Recursos de áudio e vídeo</li>
+                  <li>Acesso a materiais para download</li>
+                </ul>
+
+                <div className={styles.instrucoesPagamento}>
+                  <h4>Como fazer sua doação:</h4>
+                  <ol className={styles.passosDoacao}>
+                    <li>
+                      Faça uma transferência PIX para:{" "}
+                      <strong>CPF: 120.119.617-50</strong>
+                    </li>
+                    <li>
+                      Envie o comprovante para o WhatsApp:{" "}
+                      <strong>(51) 99339-2983</strong>
+                    </li>
+                    <li>Você receberá seu acesso em até 24 horas</li>
+                  </ol>
+                </div>
+              </div>
+
+              <p className={styles.doacaoTexto}>
+                Este é um trabalho que fazemos com paixão e toda doação,
+                independente do valor, faz diferença para continuarmos
+                crescendo. Como diz a Palavra: "Cada um contribua segundo propôs
+                no seu coração; não com tristeza, ou por necessidade; porque
+                Deus ama ao que dá com alegria." - 2 Coríntios 9:7
+              </p>
+              <div className={styles.doacaoBotoes}>
+                <Link href="/doacao" className={styles.doacaoButton}>
+                  Fazer uma Doação
+                </Link>
+                <Link href="/contato" className={styles.contatoButton}>
+                  Fale Conosco
+                </Link>
               </div>
             </div>
           </section>
@@ -203,13 +259,13 @@ export default function Sobre() {
             <div className={styles.participacaoCard}>
               <h2>Faça Parte da Nossa Comunidade</h2>
               <p>
-                Queremos te convidar a conhecer mais sobre nossa igreja e
-                participar de nossas atividades. Venha nos visitar em um de
-                nossos cultos ou entre em contato para mais informações.
+                Convidamos você a explorar todos os recursos disponíveis em
+                nosso portal e a se juntar à nossa comunidade. Cadastre-se para
+                receber atualizações sobre novos conteúdos e recursos.
               </p>
               <div className={styles.participacaoBotoes}>
-                <Link href="/eventos" className={styles.participacaoButton}>
-                  Ver Horários de Cultos
+                <Link href="/cadastro" className={styles.participacaoButton}>
+                  Cadastre-se Gratuitamente
                 </Link>
                 <Link href="/contato" className={styles.contatoButton}>
                   Entre em Contato

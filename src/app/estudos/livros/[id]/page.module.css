@@ -1,0 +1,361 @@
+/* Estilos para a página de comentário de livro individual */
+
+/* Layout Geral */
+.comentarioPage {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #f9f7f4;
+  color: #333;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.main {
+  flex: 1;
+  padding: 40px 0;
+}
+
+/* Hero Section */
+.heroSection {
+  position: relative;
+  background-image: url("/images/biblia.webp");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.heroOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 2;
+}
+
+.heroContent h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.heroContent p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+/* Seção de Carregamento e Erro */
+.carregandoContainer,
+.erroContainer,
+.naoEncontradoContainer {
+  text-align: center;
+  padding: 100px 20px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.carregando {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.erroContainer h2,
+.naoEncontradoContainer h2 {
+  color: #c53030;
+  margin-bottom: 20px;
+}
+
+.erroContainer p,
+.naoEncontradoContainer p {
+  margin-bottom: 30px;
+}
+
+.botaoVoltar {
+  display: inline-block;
+  background-color: #3182ce;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+.botaoVoltar:hover {
+  background-color: #2c5282;
+}
+
+/* Seção de Introdução */
+.introSection {
+  margin-bottom: 40px;
+}
+
+.livroInfo {
+  display: flex;
+  gap: 30px;
+}
+
+.livroImageContainer {
+  flex-shrink: 0;
+}
+
+.livroImage {
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  object-fit: cover;
+}
+
+.livroTextoInfo {
+  flex: 1;
+}
+
+.livroTitulo {
+  font-size: 2rem;
+  color: #2d3748;
+  margin-bottom: 5px;
+}
+
+.livroAutor {
+  font-size: 1.1rem;
+  color: #718096;
+  margin-bottom: 20px;
+}
+
+.divider {
+  height: 3px;
+  width: 100px;
+  background-color: #3182ce;
+  margin-bottom: 20px;
+}
+
+.livroResumo {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+
+.temasTags h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #2d3748;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tag {
+  background-color: #ebf8ff;
+  color: #3182ce;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* Seção de Capítulos */
+.capitulosSection {
+  margin-bottom: 40px;
+}
+
+.sectionTitle {
+  font-size: 1.5rem;
+  color: #2d3748;
+  margin-bottom: 15px;
+}
+
+.capitulosNavegacao {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.capituloBtn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #e2e8f0;
+  background-color: white;
+  color: #4a5568;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.capituloBtn:hover {
+  border-color: #3182ce;
+  color: #3182ce;
+}
+
+.capituloAtivo {
+  background-color: #3182ce;
+  color: white;
+  border-color: #3182ce;
+}
+
+/* Conteúdo do Capítulo */
+.conteudoSection {
+  background-color: white;
+  border-radius: 8px;
+  padding: 30px;
+  margin-bottom: 40px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.capituloTitulo {
+  font-size: 1.8rem;
+  color: #2d3748;
+  margin-bottom: 15px;
+}
+
+.capituloConteudo {
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.capituloConteudo p {
+  margin-bottom: 20px;
+}
+
+/* Versículos Chave */
+.versiculosSection {
+  margin-bottom: 40px;
+}
+
+.versiculosLista {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.versiculoCard {
+  background-color: white;
+  border-radius: 8px;
+  padding: 25px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.versiculoTexto {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 15px;
+  font-style: italic;
+}
+
+.versiculoReferencia {
+  text-align: right;
+  color: #4a5568;
+  font-weight: 600;
+}
+
+/* Bibliografia Recomendada */
+.bibliografiaSection {
+  margin-bottom: 40px;
+}
+
+.bibliografiaLista {
+  list-style-type: none;
+  background-color: white;
+  border-radius: 8px;
+  padding: 25px 30px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.bibliografiaItem {
+  padding: 12px 0;
+  border-bottom: 1px solid #e2e8f0;
+  font-size: 1.05rem;
+}
+
+.bibliografiaItem:last-child {
+  border-bottom: none;
+}
+
+/* CTA Section */
+.ctaSection {
+  margin-bottom: 40px;
+}
+
+.ctaContainer {
+  background-color: #3182ce;
+  color: white;
+  border-radius: 8px;
+  padding: 40px;
+  text-align: center;
+}
+
+.ctaContainer h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.ctaContainer p {
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+  opacity: 0.9;
+}
+
+.ctaBtn {
+  display: inline-block;
+  background-color: white;
+  color: #3182ce;
+  padding: 12px 25px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.ctaBtn:hover {
+  background-color: #f7fafc;
+  transform: translateY(-2px);
+}
+
+/* Navegação */
+.navegacaoSection {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 40px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .heroContent h1 {
+    font-size: 2rem;
+  }
+
+  .livroInfo {
+    flex-direction: column;
+  }
+
+  .livroImageContainer {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .versiculosLista {
+    grid-template-columns: 1fr;
+  }
+
+  .ctaContainer {
+    padding: 30px 20px;
+  }
+}

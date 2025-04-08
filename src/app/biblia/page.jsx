@@ -8,7 +8,8 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import bibliaService from "../services/bibliaService";
 
-const livrosBiblia = [
+// Livros do Antigo Testamento
+const livrosAT = [
   { id: "GEN", nome: "Gênesis", abrev: "gn" },
   { id: "EXO", nome: "Êxodo", abrev: "ex" },
   { id: "LEV", nome: "Levítico", abrev: "lv" },
@@ -48,6 +49,10 @@ const livrosBiblia = [
   { id: "HAG", nome: "Ageu", abrev: "ag" },
   { id: "ZEC", nome: "Zacarias", abrev: "zc" },
   { id: "MAL", nome: "Malaquias", abrev: "ml" },
+];
+
+// Livros do Novo Testamento
+const livrosNT = [
   { id: "MAT", nome: "Mateus", abrev: "mt" },
   { id: "MRK", nome: "Marcos", abrev: "mc" },
   { id: "LUK", nome: "Lucas", abrev: "lc" },
@@ -88,6 +93,7 @@ export default function Biblia() {
   const [carregando, setCarregando] = useState(false);
   const [erro, setErro] = useState(null);
   const [totalCapitulos, setTotalCapitulos] = useState(0);
+  const [testamentoAtivo, setTestamentoAtivo] = useState("AT");
 
   // Buscar o versículo do dia ao carregar a página
   useEffect(() => {
@@ -192,6 +198,14 @@ export default function Biblia() {
     }
   };
 
+  const alternarTestamento = (testamento) => {
+    setTestamentoAtivo(testamento);
+    setLivroSelecionado(null);
+    setCapitulo(1);
+    setVersiculo("");
+    setResultadoLeitura(null);
+  };
+
   return (
     <div className={styles.bibliaPage}>
       <Navbar />
@@ -232,29 +246,91 @@ export default function Biblia() {
             </div>
           </section>
 
+          {/* Estatísticas da Bíblia */}
+          <section className={styles.estatisticasSection}>
+            <h2 className={styles.estatisticasTitulo}>A Bíblia em Números</h2>
+            <div className={styles.estatisticasGrid}>
+              <div className={styles.estatisticaCard}>
+                <div className={styles.estatisticaValor}>66</div>
+                <div className={styles.estatisticaLabel}>Livros</div>
+              </div>
+              <div className={styles.estatisticaCard}>
+                <div className={styles.estatisticaValor}>39</div>
+                <div className={styles.estatisticaLabel}>
+                  Livros no Antigo Testamento
+                </div>
+              </div>
+              <div className={styles.estatisticaCard}>
+                <div className={styles.estatisticaValor}>27</div>
+                <div className={styles.estatisticaLabel}>
+                  Livros no Novo Testamento
+                </div>
+              </div>
+              <div className={styles.estatisticaCard}>
+                <div className={styles.estatisticaValor}>1.189</div>
+                <div className={styles.estatisticaLabel}>Capítulos</div>
+              </div>
+              <div className={styles.estatisticaCard}>
+                <div className={styles.estatisticaValor}>31.102</div>
+                <div className={styles.estatisticaLabel}>Versículos</div>
+              </div>
+              <div className={styles.estatisticaCard}>
+                <div className={styles.estatisticaValor}>~1.500</div>
+                <div className={styles.estatisticaLabel}>
+                  Anos para ser escrita
+                </div>
+              </div>
+            </div>
+          </section>
+
           {/* Navegação da Bíblia */}
           <section className={styles.navegacaoSection}>
             <div className={styles.navegacaoContainer}>
+              <div className={styles.testamentosNav}>
+                <button
+                  className={`${styles.testamentoBtn} ${
+                    testamentoAtivo === "AT" ? styles.testamentoAtivo : ""
+                  }`}
+                  onClick={() => alternarTestamento("AT")}
+                >
+                  Antigo Testamento
+                </button>
+                <button
+                  className={`${styles.testamentoBtn} ${
+                    testamentoAtivo === "NT" ? styles.testamentoAtivo : ""
+                  }`}
+                  onClick={() => alternarTestamento("NT")}
+                >
+                  Novo Testamento
+                </button>
+              </div>
+
               <div className={styles.livrosContainer}>
-                <h3>Selecione um Livro</h3>
+                <h3>
+                  {testamentoAtivo === "AT"
+                    ? "Livros do Antigo Testamento"
+                    : "Livros do Novo Testamento"}
+                </h3>
                 <div className={styles.livrosList}>
-                  {livrosBiblia.map((livro) => (
-                    <button
-                      key={livro.id}
-                      onClick={() => {
-                        setLivroSelecionado(livro);
-                        setCapitulo(1);
-                        setVersiculo("");
-                      }}
-                      className={`${styles.livroButton} ${
-                        livroSelecionado?.id === livro.id
-                          ? styles.livroSelecionado
-                          : ""
-                      }`}
-                    >
-                      {livro.nome}
-                    </button>
-                  ))}
+                  {(testamentoAtivo === "AT" ? livrosAT : livrosNT).map(
+                    (livro) => (
+                      <button
+                        key={livro.id}
+                        onClick={() => {
+                          setLivroSelecionado(livro);
+                          setCapitulo(1);
+                          setVersiculo("");
+                        }}
+                        className={`${styles.livroButton} ${
+                          livroSelecionado?.id === livro.id
+                            ? styles.livroSelecionado
+                            : ""
+                        }`}
+                      >
+                        {livro.nome}
+                      </button>
+                    )
+                  )}
                 </div>
               </div>
 

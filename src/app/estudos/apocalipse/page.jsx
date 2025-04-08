@@ -4,8 +4,8 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import styles from "./page.module.css";
-import Navbar from "../../../components/Navbar";
-import Footer from "../../../components/Footer";
+import Navbar from "../../components/Navbar";
+import Footer from "../../components/Footer";
 
 export default function EstudosApocalipse() {
   const [carregando, setCarregando] = useState(true);
@@ -210,8 +210,8 @@ export default function EstudosApocalipse() {
 
                   <div className={styles.destaqueCard}>
                     <Image
-                      src="/images/igreja.jpg"
-                      alt="As Sete Igrejas"
+                      src="/images/biblia.webp"
+                      alt="As 7 igrejas do Apocalipse"
                       width={350}
                       height={200}
                       className={styles.destaqueImg}
@@ -231,8 +231,8 @@ export default function EstudosApocalipse() {
 
                   <div className={styles.destaqueCard}>
                     <Image
-                      src="/images/trono.jpg"
-                      alt="O Trono de Deus"
+                      src="/images/leão.webp"
+                      alt="Jesus está voltando"
                       width={350}
                       height={200}
                       className={styles.destaqueImg}

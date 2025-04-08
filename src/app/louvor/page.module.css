@@ -296,6 +296,32 @@
   color: var(--preto);
 }
 
+.playBtn {
+  width: auto;
+  height: auto;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--vermelho);
+}
+
+.playBtn:hover {
+  background-color: var(--dourado);
+}
+
+.playIcon::before {
+  content: "▶";
+  font-size: 1rem;
+  color: var(--branco);
+  margin-right: 5px;
+}
+
+.playBtn:hover .playIcon::before {
+  color: var(--preto);
+}
+
 .semResultados {
   grid-column: 1 / -1;
   text-align: center;
