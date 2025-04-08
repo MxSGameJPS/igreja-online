@@ -68,7 +68,7 @@ O Portal Cristão foi desenvolvido por **Saulo Pavanello**:
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/saulopavanello/)
 [![WhatsApp](https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://wa.me/5551993392983)
 
-- Email: contato@portalcristao.com
+- Email: mxsgamejps@gmail.com
 - Telefone: (51) 99339-2983
 
 ## 📄 Licença
